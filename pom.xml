@@ -4,11 +4,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>work.xeltica.craft.otanoshimiplugin</groupId>
-  <artifactId>XelticaMCOtanoshimiPlugin</artifactId>
-  <version>1.7.1</version>
+  <groupId>work.xeltica.craft.core</groupId>
+  <artifactId>XCore</artifactId>
+  <version>2.0.0-beta.3</version>
 
-  <name>XelticaMCOtanoshimiPlugin</name>
+  <name>X-Core</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,9 +40,9 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.destroystokyo.paper</groupId>
+      <groupId>io.papermc.paper</groupId>
       <artifactId>paper-api</artifactId>
-      <version>1.16.5-R0.1-SNAPSHOT</version>
+      <version>1.17.1-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -95,7 +95,7 @@
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
           <configuration>
-            <finalName>XelticaMCOtanoshimiPlugin</finalName>
+            <finalName>X-Core</finalName>
           </configuration>
         </plugin>
         <plugin>

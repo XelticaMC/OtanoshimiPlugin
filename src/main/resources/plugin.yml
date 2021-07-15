@@ -1,5 +1,5 @@
 name: ${project.artifactId}
-main: work.xeltica.craft.otanoshimiplugin.OtanoshimiPlugin
+main: work.xeltica.craft.core.XCorePlugin
 version: ${project.version}
 api-version: 1.16
 softdepend:
@@ -23,6 +23,10 @@ commands:
     description: トラベルチケットを授与します。
     usage: /givetravelticket <playerName> [type=NORMAL] [amount=1]
     permission: otanoshimi.command.givetravelticket
+  givecustomitem:
+    description: XelticaMCオリジナルアイテムを授与します。
+    usage: /givetravelticket <playerName> <xphone>
+    permission: otanoshimi.command.givecustomitem
   report:
     description: 処罰GUIを表示します。
     usage: /report <playerName>
@@ -42,10 +46,6 @@ commands:
   promo:
     description: 市民への昇格方法を確認します。
     usage: /promo
-  visitor:
-    description: 観光モードの有効/無効を切り替えるか、現在のモードを取得します。
-    usage: /visitor [on/off]
-    permission: otanoshimi.command.visitor
   cat:
     description: CATモードの有効/無効を切り替えるか、現在のモードを取得します。
     usage: /cat [on/off]
@@ -54,7 +54,12 @@ commands:
     aliases: [ hub ]
     description: ロビーに移動します。
     usage: /hub help
-  __otanoshimi_gui_event__:
+  xtp:
+    aliases: [ xteleport ]
+    description: 保存された過去位置を用いてテレポートします。
+    usage: /xtp <world> [player]
+    permission: otanoshimi.command.xtp
+  __core_gui_event__:
     description: "?"
     usage: "?"
   debug:
@@ -65,6 +70,8 @@ permissions:
   otanoshimi.command.pvp:
     default: op
   otanoshimi.command.givetravelticket:
+    default: op
+  otanoshimi.command.givecustomitem:
     default: op
   otanoshimi.command.signedit:
     default: op
@@ -80,10 +87,6 @@ permissions:
     default: op
   otanoshimi.staff:
     default: op
-  otanoshimi.command.visitor:
-    default: true
-  otanoshimi.command.visitor.set:
-    default: op
   otanoshimi.command.cat:
     default: true
   hub.teleport.sandbox:
@@ -97,4 +100,8 @@ permissions:
   hub.gatekeeper.staff:
     default: op
   otanoshimi.command.debug:
+    default: op
+  otanoshimi.command.xtp:
+    default: op
+  otanoshimi.command.xtp.other:
     default: op

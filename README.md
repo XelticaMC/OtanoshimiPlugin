@@ -1,6 +1,6 @@
-# お楽しみプラグイン
+# X-Core Plugin
 
-XelticaMC の細々とした独自機能を提供するプラグイン。
+XelticaMC の中枢を為すプラグイン。
 
 ## 機能
 
